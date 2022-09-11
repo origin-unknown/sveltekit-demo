@@ -1,0 +1,38 @@
+[
+  {
+    "duration": "2010 - present",
+    "position": "Web Developer",
+    "organisation": "Vircrosoft",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi vero fugit."
+  },
+  {
+    "duration": "2008 - 2011",
+    "position": "Software Engineer",
+    "organisation": "Boogle, Inc",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi vero fugit."
+  },
+  {
+    "duration": "2016 - 2017",
+    "position": "C++ Programmer",
+    "organisation": "Slime Tech",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi vero fugit."
+  },
+  {
+    "duration": "2009 - 2013",
+    "position": "Business Degree",
+    "organisation": "Sussex University",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi vero fugit."
+  },
+  {
+    "duration": "2013 - 2016",
+    "position": "Computer Science Degree",
+    "organisation": "Brookes University",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi vero fugit."
+  },
+  {
+    "duration": "2017 - present",
+    "position": "3d Animation",
+    "organisation": "Brighton University",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi vero fugit."
+  }
+]
