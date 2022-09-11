@@ -44,6 +44,8 @@ npm i -D @sveltejs/adapter-static
 ```
 Configure `svelte.config.js`.
 
+## GitHub Pages
+
 Install `gh-pages`.
 ```bash
 npm i -D gh-pages
@@ -53,6 +55,8 @@ Add this to the scripts section of `package.json`.
 ```
 "deploy": "npm run build && npx gh-pages -d build"
 ```
+
+Run `npm run deploy` to deploy on GitHub Pages.
 
 
 ???
