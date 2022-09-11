@@ -42,20 +42,20 @@ You can preview the production build with `npm run preview`.
 ```bash
 npm i -D @sveltejs/adapter-static
 ```
-
 Configure `svelte.config.js`.
 
-???
-```bash
-touch static/.nojekyll && git add static/.nojekyll
-```
-
-???
+Install `gh-pages`.
 ```bash
 npm i -D gh-pages
 ```
 
-??? Add this to package.json
+Add this to the scripts section of `package.json`.
 ```
 "deploy": "npm run build && npx gh-pages -d build"
+```
+
+
+???
+```bash
+touch static/.nojekyll && git add static/.nojekyll
 ```
