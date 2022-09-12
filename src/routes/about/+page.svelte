@@ -109,6 +109,7 @@ import { faBriefcase } from '@fortawesome/free-solid-svg-icons'
 /*Timeline*/
 .timeline {
   padding-bottom: 3rem;
+  padding-left: 1.3rem;
 }
 
 .timeline .timeline-item {
