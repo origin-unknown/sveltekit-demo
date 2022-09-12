@@ -41,7 +41,7 @@ import { faBriefcase } from '@fortawesome/free-solid-svg-icons'
           <Fa icon={faBriefcase} size="1.2x" />
         </div>
         <p class="tl-duration">{ duration }</p>
-        <h5>{ position }<span> - { organisation }</span></h5>
+        <h5>{ position }<span>{' - '}{ organisation }</span></h5>
         <p>{ description }</p>
       </div>
     {/each}
