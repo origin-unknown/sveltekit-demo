@@ -158,28 +158,14 @@ import { faBriefcase } from '@fortawesome/free-solid-svg-icons'
   padding-bottom: 3rem;
 }
 
-/* HERE */
-
 @media screen and (max-width: 1400px) {
-  .main-title h2 .bg-text {
-    font-size: 5.5rem;
-  }
 }
 @media screen and (max-width: 1200px) {
   .main-title h2 {
     font-size: 4rem;
   }
-  .main-title h2 span {
-    font-size: 4rem;
-  }
-  .main-title h2 .bg-text {
-    font-size: 4.5rem;
-  }
   .about-container {
     grid-template-columns: repeat(1, 1fr);
-  }
-  .about-container .right-about {
-    padding-top: 2.5rem;
   }
   .about-container .left-about {
     padding-right: 0rem;
@@ -191,21 +177,12 @@ import { faBriefcase } from '@fortawesome/free-solid-svg-icons'
   .main-title h2 {
     font-size: 3rem;
   }
-  .main-title h2 span {
-    font-size: 3rem;
-  }
-  .main-title h2 .bg-text {
-    font-size: 4rem;
-  }
 }
 @media screen and (max-width: 576px) {
 }
 @media screen and (max-width: 320px) {
   .main-title h2 {
     font-size: 2rem;
-  }
-  .main-title h2 span {
-    font-size: 2.3rem;
   }
 }
 

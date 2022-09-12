@@ -142,19 +142,10 @@ import projects from '$lib/data/projects.json';
 }
 
 @media screen and (max-width: 1400px) {
-  .main-title h2 .bg-text {
-    font-size: 5.5rem;
-  }
 }
 @media screen and (max-width: 1200px) {
   .main-title h2 {
     font-size: 4rem;
-  }
-  .main-title h2 span {
-    font-size: 4rem;
-  }
-  .main-title h2 .bg-text {
-    font-size: 4.5rem;
   }
 }
 @media screen and (max-width: 992px) {
@@ -166,12 +157,6 @@ import projects from '$lib/data/projects.json';
   .main-title h2 {
     font-size: 3rem;
   }
-  .main-title h2 span {
-    font-size: 3rem;
-  }
-  .main-title h2 .bg-text {
-    font-size: 4rem;
-  }
 }
 @media screen and (max-width: 576px) {
   .portfolio-items {
@@ -181,9 +166,6 @@ import projects from '$lib/data/projects.json';
 @media screen and (max-width: 320px) {
   .main-title h2 {
     font-size: 2rem;
-  }
-  .main-title h2 span {
-    font-size: 2.3rem;
   }
 }
 

@@ -75,10 +75,10 @@ const menuItems = [
 .navbar ul > * li {
   margin: 0.7rem 0.84rem;
 }
-.navbar .divider {
+/* .navbar .divider {
   border: none;
   margin: 0.35rem 0;
-}
+} */
 
 /* maybe in other file */
 .btn-round {
@@ -133,9 +133,9 @@ a.active {
   .navbar ul > * li {
     margin: .7rem 0.2rem;
   }
-  .navbar .divider {
+  /* .navbar .divider {
     margin: 0 0.184rem;
-  }
+  } */
 }
 
 
