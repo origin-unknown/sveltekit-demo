@@ -58,7 +58,7 @@ Add this to the scripts section of `package.json`.
 
 Add `.nojekyll` file.
 ```bash
-touch static/.nojekyll && git add static/.nojekyll
+touch static/.nojekyll
 ```
 
 Run `npm run deploy` to deploy on GitHub Pages.
