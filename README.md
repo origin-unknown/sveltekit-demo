@@ -53,13 +53,12 @@ npm i -D gh-pages
 
 Add this to the scripts section of `package.json`.
 ```
-"deploy": "npm run build && npx gh-pages -d build"
+"deploy": "npm run build && npx gh-pages -d build -t true"
 ```
 
-Run `npm run deploy` to deploy on GitHub Pages.
-
-
-???
+Add `.nojekyll` file.
 ```bash
 touch static/.nojekyll && git add static/.nojekyll
 ```
+
+Run `npm run deploy` to deploy on GitHub Pages.

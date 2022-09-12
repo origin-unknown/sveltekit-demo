@@ -21,7 +21,8 @@ const config = {
 
 		paths: {
 			base: dev ? '' : '/sveltekit-demo'	// set to repository name of github
-		}
+		},
+		// appDir: 'app_'
 	}
 };
 
