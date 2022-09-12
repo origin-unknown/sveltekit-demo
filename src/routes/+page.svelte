@@ -5,7 +5,7 @@ import { author } from '$lib/constants';
 </script>
 
 <svelte:head>
-    <title>{author}</title>
+  <title>{author}</title>
 </svelte:head>
 
 <section class="container home" id="home">

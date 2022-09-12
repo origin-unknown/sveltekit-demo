@@ -4,7 +4,7 @@ import projects from '$lib/data/projects.json';
 </script>
 
 <svelte:head>
-    <title>{author} - My Portfolio</title>
+  <title>{author} - My Portfolio</title>
 </svelte:head>
 
 <section class="container portfolio" id="portfolio"><!-- remove classes -->

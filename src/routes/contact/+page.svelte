@@ -13,7 +13,7 @@ import {
 </script>
 
 <svelte:head>
-    <title>{author} - Contact Me</title>
+  <title>{author} - Contact Me</title>
 </svelte:head>
 
 <section class="container contact" id="contact">

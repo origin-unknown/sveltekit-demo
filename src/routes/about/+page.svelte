@@ -8,7 +8,7 @@ import { faBriefcase } from '@fortawesome/free-solid-svg-icons'
 </script>
 
 <svelte:head>
-    <title>{author} - About Me</title>
+  <title>{author} - About Me</title>
 </svelte:head>
 
 <section class="container about" id="about">
