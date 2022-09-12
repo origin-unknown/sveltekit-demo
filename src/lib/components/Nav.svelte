@@ -1,6 +1,7 @@
 <script>
 import { page } from '$app/stores';
 import { base } from '$app/paths';
+import { theme } from '$lib/stores';
 
 import Fa from 'svelte-fa'
 import {
@@ -8,6 +9,7 @@ import {
   faUser,
   faBriefcase,
   faEnvelopeOpen,
+  faAdjust
 } from '@fortawesome/free-solid-svg-icons'
 
 const menuItems = [
@@ -16,6 +18,25 @@ const menuItems = [
   { path: base + '/projects/', text: 'Projects', icon: faBriefcase },
   { path: base + '/contact/', text: 'Contact', icon: faEnvelopeOpen }
 ];
+
+/*
+ * This example uses svelte stores. Switch to sessionstorage to keep the
+ * settings even after a reload.
+ */
+const handleThemeChange = evt => {
+    let mode = $theme;
+    if (mode === 'system') {
+      const query = '(prefers-color-scheme: dark)';
+      const match = (window.matchMedia && window.matchMedia(query).matches);
+      mode = match ? 'light' : 'dark';
+    } else {
+      document.body.classList.remove(`${mode}-mode`);
+      mode = mode === 'dark' ? 'light' : 'dark';
+    }
+    document.body.classList.add(`${mode}-mode`);
+    theme.set(mode);
+};
+
 </script>
 
 <nav class="navbar">
@@ -30,6 +51,17 @@ const menuItems = [
       </li>
     {/each}
   </ul>
+  <hr class="divider" />
+  <ul>
+    <li>
+      <button
+        class="btn-round"
+        id="theme-btn"
+        on:click={handleThemeChange}
+      ><Fa icon={faAdjust} size="1.2x" /></button>
+    </li>
+  </ul>
+
 </nav>
 
 <style>
@@ -75,10 +107,10 @@ const menuItems = [
 .navbar ul > * li {
   margin: 0.7rem 0.84rem;
 }
-/* .navbar .divider {
+.navbar .divider {
   border: none;
   margin: 0.35rem 0;
-} */
+}
 
 /* maybe in other file */
 .btn-round {
@@ -120,6 +152,7 @@ a.active {
   .navbar ul {
     margin-top: 0;
     margin-bottom: 0;
+    padding: 0;
     flex-direction: row;
   }
   .navbar ul:first-child {
@@ -133,9 +166,9 @@ a.active {
   .navbar ul > * li {
     margin: .7rem 0.2rem;
   }
-  /* .navbar .divider {
-    margin: 0 0.184rem;
-  } */
+  .navbar .divider {
+    margin: 0 0;
+  }
 }
 
 

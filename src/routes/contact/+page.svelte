@@ -34,7 +34,7 @@ import {
               <Fa icon={faMapMarkerAlt} size="1.2x" />
               <span>Location:</span>
             </div>
-            <p>London, united Kingdom</p>
+            <p>London, United Kingdom</p>
           </div>
           <div class="contact-item">
             <div class="icon">
@@ -96,6 +96,7 @@ import {
 .contact-content-con {
   display: flex;
   padding-top: 3.5rem;
+  margin-bottom: 3rem;
 }
 
 .contact-content-con .left-contact {
@@ -116,11 +117,28 @@ import {
 .contact-content-con .left-contact .contact-info .contact-item p {
   margin: 0.3rem 0;
   padding: 0;
+  text-align: end;
 }
 
 .contact-content-con .left-contact .contact-info .contact-item .icon {
   display: grid;
   grid-template-columns: 40px 1fr;
+}
+
+@media screen and (max-width: 1200px) {
+  .main-title h2 {
+    font-size: 4rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main-title h2 {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .main-title h2 {
+    font-size: 2rem;
+  }
 }
 
 </style>

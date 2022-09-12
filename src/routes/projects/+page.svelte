@@ -169,5 +169,4 @@ import projects from '$lib/data/projects.json';
   }
 }
 
-
 </style>
