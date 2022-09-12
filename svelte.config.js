@@ -8,14 +8,14 @@ const config = {
 	kit: {
 		// adapter: adapter()
 		adapter: adapter({
-       // default options are shown. On some platforms
-       // these options are set automatically — see below
-       pages: 'build',
-       assets: 'build',
-			 fallback: false,					// -> page.js: export const prerender = true;
-			 // fallback: '200.html', // or use this fallback
-			 precompress: false
-    }),
+			// default options are shown. On some platforms
+			// these options are set automatically — see below
+			pages: 'build',
+			assets: 'build',
+			fallback: false,         // -> page.js: export const prerender = true;
+			// fallback: '200.html', // or use this fallback
+			precompress: false
+		}),
 
 		trailingSlash: 'always',
 
