@@ -37,14 +37,14 @@ You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
 
-## Static Adapter
+## GitHub Pages
+
+Install static adapter.
 
 ```bash
 npm i -D @sveltejs/adapter-static
 ```
 Configure `svelte.config.js`.
-
-## GitHub Pages
 
 Install `gh-pages`.
 ```bash

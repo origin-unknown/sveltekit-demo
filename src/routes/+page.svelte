@@ -8,12 +8,14 @@ import { author } from '$lib/constants';
     <title>{author}</title>
 </svelte:head>
 
-<section class="header-content">
-  <div class="left-header">
-    <div class="h-shape"></div>
-  </div>
-  <div class="right-header">
-    <h1 class="name">Hello, I am <span>{author}</span></h1>
+<section class="container home" id="home">
+  <div class="header-content">
+    <div class="left-header">
+      <div class="h-shape"></div>
+    </div>
+    <div class="right-header">
+      <h1 class="name">Hello, I am <span>{author}</span></h1>
+    </div>
   </div>
 </section>
 
@@ -23,42 +25,41 @@ import { author } from '$lib/constants';
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   height: 100vh;
-  overflow: hidden;
-  margin-left: 0;
 }
 
-.left-header {
+.header-content .left-header {
   display: flex;
   align-items: center;
   position: relative;
 }
 
-.right-header {
-  display: flex;
-  flex-direction: column;
-  padding-top: 3.5rem;
-  margin-left: -8.5rem;
-  margin-right: 4rem;
-}
-
-.name {
-  font-size: 3rem;
-}
-
-.name span {
-  color: var(--color-secondary);
-}
-
-.h-shape {
+.header-content .left-header .h-shape {
   transition: all .4s ease-in-out;
   width: 65%;
-  height: 180%;
+  height: 100%;
   background-color: var(--color-secondary);
   position: absolute;
   left: 0;
   top: 0;
   /* z-index: -1; */
   clip-path: polygon(0 0, 65% 0, 100% 100%, 0% 100%);
+}
+
+.header-content .right-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* padding-top: 3.5rem; */
+  margin-left: -8.5rem;
+  margin-right: 4rem;
+}
+
+.header-content .right-header .name {
+  font-size: 3rem;
+}
+
+.header-content .right-header .name span {
+  color: var(--color-secondary);
 }
 
 @media screen and (max-width: 992px) {
@@ -73,7 +74,7 @@ import { author } from '$lib/constants';
   .right-header {
     grid-row: 1;
     padding-right: 0;
-    margin: 0;
+    margin: 0 !important;
   }
 
   .right-header .name {
@@ -84,7 +85,7 @@ import { author } from '$lib/constants';
 }
 
 @media screen and (max-width: 576px) {
-  main section#home {
+  section#home {
     margin: 0 3rem 0 3rem;
   }
 }

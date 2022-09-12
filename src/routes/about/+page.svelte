@@ -11,13 +11,13 @@ import { faBriefcase } from '@fortawesome/free-solid-svg-icons'
     <title>{author} - About Me</title>
 </svelte:head>
 
-<div class="main-title">
-  <h2>About Me</h2>
-</div>
-
-<section class="container">
+<section class="container about" id="about">
 
   <div class="about-container">
+    <div class="main-title">
+      <h2>About Me</h2>
+    </div>
+
     <div class="left-about">
       <h4>Information About me</h4>
       <p>
@@ -46,9 +46,14 @@ import { faBriefcase } from '@fortawesome/free-solid-svg-icons'
       </div>
     {/each}
   </div>
+
 </section>
 
 <style>
+
+.container {
+  padding: 2rem 2.5rem;
+}
 
 .main-title {
   text-align: center;
@@ -59,6 +64,149 @@ import { faBriefcase } from '@fortawesome/free-solid-svg-icons'
   text-transform: uppercase;
   font-size: 4rem;
   font-weight: 700;
+}
+
+.about-container {
+  padding-top: 3.5rem;
+  padding-bottom: 5rem;
+}
+
+.about-container .left-about {
+  padding-top: 3.5rem;
+  padding-right: 5rem;
+}
+
+.about-container .left-about h4 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.about-container .left-about p {
+  line-height: 2rem;
+  padding: 1rem 0;
+  color: var(--color-grey-1);
+}
+
+.stat-title {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  text-align: center;
+  padding: 3.5rem 0;
+  position: relative;
+}
+
+.stat-title::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 40%;
+  height: 1px;
+  background-color: var(--color-grey-5);
+  transform: translateX(-50%);
+}
+
+/*Timeline*/
+.timeline {
+  padding-bottom: 3rem;
+}
+
+.timeline .timeline-item {
+  position: relative;
+  padding-left: 3rem;
+  border-left: 2px solid var(--color-grey-5);
+}
+
+.timeline .timeline-item .tl-icon {
+  position: absolute;
+  left: -27px;
+  top: 0;
+  background-color: var(--color-secondary);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline .timeline-item .tl-duration {
+  padding: 0.2rem 0.6rem;
+  background-color: var(--color-grey-5);
+  border-radius: 15px;
+  display: inline-block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.timeline .timeline-item h5 {
+  padding: 1rem 0;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.timeline .timeline-item h5 span {
+  color: var(--color-grey-2);
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.timeline .timeline-item p {
+  color: var(--color-grey-2);
+  padding-bottom: 3rem;
+}
+
+/* HERE */
+
+@media screen and (max-width: 1400px) {
+  .main-title h2 .bg-text {
+    font-size: 5.5rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .main-title h2 {
+    font-size: 4rem;
+  }
+  .main-title h2 span {
+    font-size: 4rem;
+  }
+  .main-title h2 .bg-text {
+    font-size: 4.5rem;
+  }
+  .about-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .about-container .right-about {
+    padding-top: 2.5rem;
+  }
+  .about-container .left-about {
+    padding-right: 0rem;
+  }
+}
+@media screen and (max-width: 992px) {
+}
+@media screen and (max-width: 768px) {
+  .main-title h2 {
+    font-size: 3rem;
+  }
+  .main-title h2 span {
+    font-size: 3rem;
+  }
+  .main-title h2 .bg-text {
+    font-size: 4rem;
+  }
+}
+@media screen and (max-width: 576px) {
+}
+@media screen and (max-width: 320px) {
+  .main-title h2 {
+    font-size: 2rem;
+  }
+  .main-title h2 span {
+    font-size: 2.3rem;
+  }
 }
 
 </style>
