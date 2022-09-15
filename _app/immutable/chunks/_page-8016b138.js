@@ -1,0 +1,1 @@
+const o=!0;async function r({params:e}){return console.log(e),{}}const n=Object.freeze(Object.defineProperty({__proto__:null,prerender:!0,load:r},Symbol.toStringTag,{value:"Module"}));export{n as _,r as l,o as p};
