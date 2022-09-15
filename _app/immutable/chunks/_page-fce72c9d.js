@@ -1,1 +1,0 @@
-import{b as n}from"./paths-6cd3a76e.js";const a=!0;async function r({params:o,fetch:t}){return console.log(o),{timeline:await t(n+"/data/timeline.json").then(e=>e.ok&&e.json())}}const s=Object.freeze(Object.defineProperty({__proto__:null,prerender:a,load:r},Symbol.toStringTag,{value:"Module"}));export{s as _,r as l,a as p};
