@@ -1,0 +1,1 @@
+import{b as r}from"./paths-6cd3a76e.js";const a=!0;async function n({params:o,fetch:t}){return{projects:await t(r+`/data/${o.lang}/projects.json`).then(e=>e.ok&&e.json())}}const p=Object.freeze(Object.defineProperty({__proto__:null,prerender:a,load:n},Symbol.toStringTag,{value:"Module"}));export{p as _,n as l,a as p};

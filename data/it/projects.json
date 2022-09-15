@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Progetto senza titolo 1",
+    "description": "Questo è il primo progetto.",
+    "image": "http://frank22.pythonanywhere.com/static/img/blog1.jpg"
+  },
+  {
+    "title": "Progetto senza titolo 2",
+    "description": "Questo è il secondo progetto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Digi dadum dingsbums.",
+    "image": "http://frank22.pythonanywhere.com/static/img/blog1.jpg"
+  },
+  {
+    "title": "Progetto senza titolo 3",
+    "description": "Questo è il terzo progetto.",
+    "image": "http://frank22.pythonanywhere.com/static/img/blog1.jpg"
+  },
+  {
+    "title": "Progetto senza titolo 4",
+    "description": "Questo è il quarto progetto.",
+    "image": "http://frank22.pythonanywhere.com/static/img/blog1.jpg"
+  }
+]
