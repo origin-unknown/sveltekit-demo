@@ -4,10 +4,10 @@
 		<meta charset="utf-8" />
 		<link rel="icon" href="/sveltekit-demo/favicon.png" />
 		<meta name="viewport" content="width=device-width" />
-		<meta http-equiv="content-security-policy" content=""><title>John Doe</title>
+		<meta http-equiv="content-security-policy" content=""><title>John Doe - My Portfolio</title>
 	<link href="/sveltekit-demo/_app/immutable/assets/_layout-c1b2363d.css" rel="stylesheet">
 	<link href="/sveltekit-demo/_app/immutable/assets/index-af927694.css" rel="stylesheet">
-	<link href="/sveltekit-demo/_app/immutable/assets/_page-0738999b.css" rel="stylesheet">
+	<link href="/sveltekit-demo/_app/immutable/assets/_page-b5fd4fd0.css" rel="stylesheet">
 	<link rel="modulepreload" href="/sveltekit-demo/_app/immutable/start-8a923a4d.js">
 	<link rel="modulepreload" href="/sveltekit-demo/_app/immutable/chunks/index-ca361f81.js">
 	<link rel="modulepreload" href="/sveltekit-demo/_app/immutable/chunks/singletons-c8343ec4.js">
@@ -19,10 +19,10 @@
 	<link rel="modulepreload" href="/sveltekit-demo/_app/immutable/chunks/index-03df43bf.js">
 	<link rel="modulepreload" href="/sveltekit-demo/_app/immutable/modules/pages/_layout.js-f7143b35.js">
 	<link rel="modulepreload" href="/sveltekit-demo/_app/immutable/chunks/_layout-70024127.js">
-	<link rel="modulepreload" href="/sveltekit-demo/_app/immutable/components/pages/_lang_/_page.svelte-91b241c8.js">
+	<link rel="modulepreload" href="/sveltekit-demo/_app/immutable/components/pages/_lang_/projects/_page.svelte-c5ad884d.js">
 	<link rel="modulepreload" href="/sveltekit-demo/_app/immutable/chunks/constants-c3307eea.js">
-	<link rel="modulepreload" href="/sveltekit-demo/_app/immutable/modules/pages/_lang_/_page.js-203b1c9e.js">
-	<link rel="modulepreload" href="/sveltekit-demo/_app/immutable/chunks/_page-ca50c3e5.js">
+	<link rel="modulepreload" href="/sveltekit-demo/_app/immutable/modules/pages/_lang_/projects/_page.js-0649d611.js">
+	<link rel="modulepreload" href="/sveltekit-demo/_app/immutable/chunks/_page-a12ae9ec.js">
 	</head>
 	<body>
 		<div>
@@ -42,12 +42,25 @@
 </nav>
 <main class="svelte-1d6y6b0">
 
-<section class="container home svelte-1msefv4" id="home"><div class="header-content svelte-1msefv4"><div class="left-header svelte-1msefv4"><div class="h-shape svelte-1msefv4"></div></div>
-    <div class="right-header svelte-1msefv4"><h1 class="name svelte-1msefv4"><!-- HTML_TAG_START -->Hello, I am <span>John Doe</span><!-- HTML_TAG_END --></h1></div></div>
+<section class="container portfolio svelte-rtwfk9" id="portfolio">
+  <div class="portfolio-content svelte-rtwfk9"><div class="main-title svelte-rtwfk9"><h2 class="svelte-rtwfk9">My Portfolio</h2></div>
+      <div class="portfolio-items svelte-rtwfk9"><div class="portfolio-item svelte-rtwfk9"><div class="portfolio-image-wrapper svelte-rtwfk9"><div class="portfolio-image svelte-rtwfk9" style="background-image: url(http://frank22.pythonanywhere.com/static/img/blog1.jpg)"></div></div>
+              <div class="portfolio-text svelte-rtwfk9"><h4 class="svelte-rtwfk9">Untitled Project 1</h4>
+                <p class="svelte-rtwfk9">This is the first project.</p></div>
+            </div><div class="portfolio-item svelte-rtwfk9"><div class="portfolio-image-wrapper svelte-rtwfk9"><div class="portfolio-image svelte-rtwfk9" style="background-image: url(http://frank22.pythonanywhere.com/static/img/blog1.jpg)"></div></div>
+              <div class="portfolio-text svelte-rtwfk9"><h4 class="svelte-rtwfk9">Untitled Project 2</h4>
+                <p class="svelte-rtwfk9">This is the second project. Lorem ipsum dolor sit amet consectetur adipisicing elit. Digi dadum dingsbums.</p></div>
+            </div><div class="portfolio-item svelte-rtwfk9"><div class="portfolio-image-wrapper svelte-rtwfk9"><div class="portfolio-image svelte-rtwfk9" style="background-image: url(http://frank22.pythonanywhere.com/static/img/blog1.jpg)"></div></div>
+              <div class="portfolio-text svelte-rtwfk9"><h4 class="svelte-rtwfk9">Untitled Project 3</h4>
+                <p class="svelte-rtwfk9">This is the third project.</p></div>
+            </div><div class="portfolio-item svelte-rtwfk9"><div class="portfolio-image-wrapper svelte-rtwfk9"><div class="portfolio-image svelte-rtwfk9" style="background-image: url(http://frank22.pythonanywhere.com/static/img/blog1.jpg)"></div></div>
+              <div class="portfolio-text svelte-rtwfk9"><h4 class="svelte-rtwfk9">Untitled Project 4</h4>
+                <p class="svelte-rtwfk9">This is the fourth project.</p></div>
+            </div></div></div>
 </section></main>
 
 
-		<script type="module" data-sveltekit-hydrate="2t9qri">
+		<script type="module" data-sveltekit-hydrate="pbmqx1">
 		import { start } from "/sveltekit-demo/_app/immutable/start-8a923a4d.js";
 
 		start({
@@ -55,17 +68,17 @@
 			hydrate: {
 				status: 200,
 				error: null,
-				node_ids: [0, 3],
+				node_ids: [0, 6],
 				params: {lang:"en"},
-				routeId: "[lang]",
+				routeId: "[lang]/projects",
 				data: (function(a){return [a,a]}(null)),
 				form: null
 			},
 			paths: {"base":"/sveltekit-demo","assets":"/sveltekit-demo"},
-			target: document.querySelector('[data-sveltekit-hydrate="2t9qri"]').parentNode,
+			target: document.querySelector('[data-sveltekit-hydrate="pbmqx1"]').parentNode,
 			trailing_slash: "always"
 		});
 	</script>
-	</div>
+	<script type="application/json" data-sveltekit-fetched data-url="/sveltekit-demo/data/projects.json">{"status":200,"statusText":"","headers":{},"body":"[\n  {\n    \"title\": \"Untitled Project 1\",\n    \"description\": \"This is the first project.\",\n    \"image\": \"http://frank22.pythonanywhere.com/static/img/blog1.jpg\"\n  },\n  {\n    \"title\": \"Untitled Project 2\",\n    \"description\": \"This is the second project. Lorem ipsum dolor sit amet consectetur adipisicing elit. Digi dadum dingsbums.\",\n    \"image\": \"http://frank22.pythonanywhere.com/static/img/blog1.jpg\"\n  },\n  {\n    \"title\": \"Untitled Project 3\",\n    \"description\": \"This is the third project.\",\n    \"image\": \"http://frank22.pythonanywhere.com/static/img/blog1.jpg\"\n  },\n  {\n    \"title\": \"Untitled Project 4\",\n    \"description\": \"This is the fourth project.\",\n    \"image\": \"http://frank22.pythonanywhere.com/static/img/blog1.jpg\"\n  }\n]\n"}</script></div>
 	</body>
 </html>
