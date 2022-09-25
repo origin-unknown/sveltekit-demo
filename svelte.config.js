@@ -1,7 +1,10 @@
 // import adapter from '@sveltejs/adapter-auto';
 import adapter from '@sveltejs/adapter-static';
+import lang from './src/lib/translations/lang.js';
 
 const dev = process.env.NODE_ENV === 'development';
+
+const supportedLocales = Object.keys(lang);
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -23,6 +26,11 @@ const config = {
 			base: dev ? '' : '/sveltekit-demo'	// set to repository name of github
 		},
 		// appDir: 'app_'
+
+		prerender: {
+      // NOTE: You can modify your exported error pages here.
+      entries: supportedLocales.reduce((acc, locale) => [...acc, `/${locale}`], ['*']),
+    },
 	}
 };
 

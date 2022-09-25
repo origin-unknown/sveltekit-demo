@@ -1,0 +1,38 @@
+[
+  {
+    "duration": "2010 - regalo",
+    "position": "Sviluppatore web",
+    "organisation": "Vircrosoft",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi vero fugit."
+  },
+  {
+    "duration": "2008 - 2011",
+    "position": "Ingegnere del software",
+    "organisation": "Boogle, Inc",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi vero fugit."
+  },
+  {
+    "duration": "2016 - 2017",
+    "position": "C++ Programmatore",
+    "organisation": "Slime Tech",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi vero fugit."
+  },
+  {
+    "duration": "2009 - 2013",
+    "position": "Laurea in Economia",
+    "organisation": "Sussex University",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi vero fugit."
+  },
+  {
+    "duration": "2013 - 2016",
+    "position": "Laurea in Informatica",
+    "organisation": "Brookes University",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi vero fugit."
+  },
+  {
+    "duration": "2017 - regalo",
+    "position": "Animazione 3D",
+    "organisation": "Brighton University",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi vero fugit."
+  }
+]

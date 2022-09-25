@@ -1,70 +1,55 @@
 <script>
 import { page } from '$app/stores';
 import { base } from '$app/paths';
-import { theme } from '$lib/stores';
+import LocaleSwitch from '$lib/components/LocaleSwitch.svelte';
+import ThemeButton from '$lib/components/ThemeButton.svelte';
+import { locale } from '$lib/translations';
 
 import Fa from 'svelte-fa'
-import {
-  faHome,
-  faUser,
-  faBriefcase,
-  faEnvelopeOpen,
-  faAdjust
-} from '@fortawesome/free-solid-svg-icons'
-
-const menuItems = [
-  { path: base + '/', text: 'Home', icon: faHome },
-  { path: base + '/about/', text: 'About', icon: faUser },
-  { path: base + '/projects/', text: 'Projects', icon: faBriefcase },
-  { path: base + '/contact/', text: 'Contact', icon: faEnvelopeOpen }
-];
-
-/*
- * This example uses svelte stores. Switch to sessionstorage to keep the
- * settings even after a reload.
- */
-const handleThemeChange = evt => {
-    let mode = $theme;
-    if (mode === 'system') {
-      const query = '(prefers-color-scheme: dark)';
-      const match = (window.matchMedia && window.matchMedia(query).matches);
-      mode = match ? 'light' : 'dark';
-    } else {
-      document.body.classList.remove(`${mode}-mode`);
-      mode = mode === 'dark' ? 'light' : 'dark';
-    }
-    document.body.classList.add(`${mode}-mode`);
-    theme.set(mode);
-};
+export let sections = [];
 
 </script>
 
 <nav class="navbar">
   <ul>
-    {#each menuItems as { path, text, icon }, i}
+    {#each sections as { slug, title, icon }, i}
       <li>
         <a
-          href="{path}"
+          href="{base}/{$locale}/{slug}"
           class="btn-round"
-          class:active={$page.url.pathname == path}
+          class:active={$page.url.pathname === `${base}/${$locale}/${slug}`}
         ><Fa icon={icon} size="1.2x" /></a>
       </li>
     {/each}
   </ul>
   <hr class="divider" />
   <ul>
-    <li>
-      <button
-        class="btn-round"
-        id="theme-btn"
-        on:click={handleThemeChange}
-      ><Fa icon={faAdjust} size="1.2x" /></button>
-    </li>
+    <li><ThemeButton /></li>
+    <li><LocaleSwitch /></li>
   </ul>
 
 </nav>
 
 <style>
+
+:global(.btn-round) {
+  width: 55px;
+  max-width: 55px;
+  min-width: 55px;
+  aspect-ratio: 1/1;
+  border: none;
+  border-radius: 50%;
+  font-size: 12pt;
+  cursor: pointer;
+
+  background-color: var(--color-grey-4);
+  color: var(--color-grey-2);
+  box-shadow: var(--box-shadow-1);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .navbar {
   z-index: 1;
@@ -112,26 +97,6 @@ const handleThemeChange = evt => {
   margin: 0.35rem 0;
 }
 
-/* maybe in other file */
-.btn-round {
-  width: 55px;
-  max-width: 55px;
-  min-width: 55px;
-  aspect-ratio: 1/1;
-  border: none;
-  border-radius: 50%;
-  font-size: 12pt;
-  cursor: pointer;
-
-  background-color: var(--color-grey-4);
-  color: var(--color-grey-2);
-  box-shadow: var(--box-shadow-1);
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 a.active {
   background-color: var(--color-secondary);
 }
@@ -170,6 +135,5 @@ a.active {
     margin: 0 0;
   }
 }
-
 
 </style>

@@ -1,50 +1,48 @@
 <script>
 import { author } from '$lib/constants';
-import timeline from '$lib/data/timeline.json';
+import { t } from '$lib/translations';
 
 import Fa from 'svelte-fa'
 import { faBriefcase } from '@fortawesome/free-solid-svg-icons'
 
+/** @type {import('./$types').PageData} */
+export let data;
+const { timeline } = data;
 </script>
 
 <svelte:head>
-  <title>{author} - About Me</title>
+  <title>{author} - {$t('about.title')}</title>
 </svelte:head>
 
 <section class="container about" id="about">
 
   <div class="about-container">
     <div class="main-title">
-      <h2>About Me</h2>
+      <h2>{$t('about.title')}</h2>
     </div>
 
     <div class="left-about">
-      <h4>Information About me</h4>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Eveniet labore nihil obcaecati consequatur. Debitis error doloremque,
-        vero eos vel nemo eius voluptatem dicta tenetur modi. <br />
-        <br />
-        La musica delectus dolore fugiat exercitationem a,
-        ipsum quidem quo enim natus accusamus labore dolores nam. Unde.
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-        Harum non necessitatibus deleniti eum soluta.
-      </p>
+      <h4>{$t('about.subtitle')}</h4>
+      <p>{@html $t('about.description')}</p>
     </div>
   </div>
 
-  <h4 class="stat-title">My Timeline</h4>
+  <h4 class="stat-title">{$t('about.timeline')}</h4>
   <div class="timeline">
-    {#each timeline as {duration, position, organisation, description}, i}
-      <div class="timeline-item">
-        <div class="tl-icon">
-          <Fa icon={faBriefcase} size="1.2x" />
+    {#if timeline && timeline.length}
+      {#each timeline as {duration, position, organisation, description}, i}
+        <div class="timeline-item">
+          <div class="tl-icon">
+            <Fa icon={faBriefcase} size="1.2x" />
+          </div>
+          <p class="tl-duration">{ duration }</p>
+          <h5>{ position }<span>{' - '}{ organisation }</span></h5>
+          <p>{ description }</p>
         </div>
-        <p class="tl-duration">{ duration }</p>
-        <h5>{ position }<span>{' - '}{ organisation }</span></h5>
-        <p>{ description }</p>
-      </div>
-    {/each}
+      {/each}
+    {:else}
+      <p>{$t('about.empty')}</p>
+    {/if}
   </div>
 
 </section>

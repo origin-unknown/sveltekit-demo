@@ -1,34 +1,41 @@
 <script>
 import { author } from '$lib/constants';
-import projects from '$lib/data/projects.json';
+import { t } from '$lib/translations';
+
+/** @type {import('./$types').PageData} */
+export let data;
+const { projects } = data;
 </script>
 
 <svelte:head>
-  <title>{author} - My Portfolio</title>
+  <title>{author} - {$t('projects.title')}</title>
 </svelte:head>
 
 <section class="container portfolio" id="portfolio"><!-- remove classes -->
   <div class="portfolio-content">
     <div class="main-title">
-      <h2>My Portfolio</h2>
+      <h2>{$t('projects.title')}</h2>
     </div>
-
-    <div class="portfolio-items">
-      {#each projects as {title,description,image}, i}
-        <div class="portfolio-item">
-          <div class="portfolio-image-wrapper">
-            <div
-              class="portfolio-image"
-              style="background-image: url({image})"
-            ></div>
-          </div>
-          <div class="portfolio-text">
-            <h4>{ title }</h4>
-            <p>{ description }</p>
-          </div>
-        </div>
-      {/each}
-    </div>
+      <div class="portfolio-items">
+        {#if projects && projects.length}
+          {#each projects as {title,description,image}, i}
+            <div class="portfolio-item">
+              <div class="portfolio-image-wrapper">
+                <div
+                  class="portfolio-image"
+                  style="background-image: url({image})"
+                ></div>
+              </div>
+              <div class="portfolio-text">
+                <h4>{ title }</h4>
+                <p>{ description }</p>
+              </div>
+            </div>
+          {/each}
+        {:else}
+          <p>{$t('projects.empty')}</p>
+        {/if}
+      </div>
 
   </div>
 </section>

@@ -3,9 +3,12 @@ import { page } from '$app/stores';
 import Nav from '$lib/components/Nav.svelte';
 import '../app.css';
 
+/** @type {import('./$types').LayoutData} */
+export let data;
+
 </script>
 
-<Nav />
+<Nav sections={ data.sections } />
 {#key $page}
   <main>
     <slot />
@@ -27,7 +30,6 @@ import '../app.css';
 
 main {
   margin-right: 90px;
-
   animation: .75s slideIn;
 }
 
